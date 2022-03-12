@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".presentacion.PreguntasActivity">
+    <!-- android:background="@color/rojo"
+    android:background="@drawable/degradado"
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCuentaAtras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/numeracion"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/degradado_circulo"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+
+            />
+
+        <FrameLayout
+            android:id="@+id/FrameLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="469dp">
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/otroF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fragment !Correcto¡" />
+
+        <Button
+            android:id="@+id/butEmpe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

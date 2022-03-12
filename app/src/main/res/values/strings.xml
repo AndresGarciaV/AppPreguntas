@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AverResponde</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="pregunta1">Cual es la capital de Ecuador?</string>
+</resources>
