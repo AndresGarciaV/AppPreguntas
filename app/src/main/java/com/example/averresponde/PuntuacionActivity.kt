@@ -7,6 +7,7 @@ import android.os.CountDownTimer
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import com.example.averresponde.presentacion.FragmentPreguntas
 
 class PuntuacionActivity : AppCompatActivity() {
     private var txtTiempo:EditText?=null
@@ -19,6 +20,7 @@ class PuntuacionActivity : AppCompatActivity() {
         //Vinculacion
         txtTiempo=findViewById(R.id.ConstraintLayout)
         tvCuentaAtras=findViewById(R.id.tvCuentaAtras)
+
 
     }
     fun play(view: View){

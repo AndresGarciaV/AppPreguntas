@@ -56,6 +56,12 @@ class PreguntasActivity : AppCompatActivity() {
             //Pintar el fregment
             fragmentTrasaction.commit()
         }
+
+
+
+
+
+
     }
 
 
@@ -71,7 +77,7 @@ class PreguntasActivity : AppCompatActivity() {
         n=n+1
         if(n<=numPreguntas){
             numeracionn?.text= (n).toString()
-            play() //cada vez que se llama a un fragment se llama a la cuenta regresiva
+            //play() //cada vez que se llama a un fragment se llama a la cuenta regresiva
         }else{
             //para cambiar a la otra activity
             intent= Intent(this, PuntuacionActivity::class.java)
