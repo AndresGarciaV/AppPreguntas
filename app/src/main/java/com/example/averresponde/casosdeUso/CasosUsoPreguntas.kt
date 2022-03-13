@@ -7,7 +7,7 @@ internal class CasosUsoPreguntas {
     private val listPreguntasMusica = listOf<PreguntasDC>(
         PreguntasDC(
             "1. ¿En qué país nació Antonio Vivaldi? ",
-            "En Italia",
+            "*Italia",
             "Francia",
             "Colombia",
             "Estados Unidos",
@@ -15,7 +15,7 @@ internal class CasosUsoPreguntas {
         ),
         PreguntasDC(
             "2. ¿Qué rockero es recordado por haber “incendiado” su guitarra?",
-            "Jimi Hendrix",
+            "*Jimi Hendrix",
             "Nikki Sixx",
             "Georges Biard",
             "Ozzy",
@@ -23,7 +23,7 @@ internal class CasosUsoPreguntas {
         ),
         PreguntasDC(
             "3. ¿Qué artista es comúnmente conocido como “El Padre del Soul”?",
-            "Ray Charles",
+            "*Ray Charles",
             "Alice Cooper",
             "Ringo Starr",
             "Marilyn Manson",
@@ -31,7 +31,7 @@ internal class CasosUsoPreguntas {
         ),
         PreguntasDC(
             "4. ¿Qué cantante es considerado “El Rey del Rock and Roll”?",
-            "Elvis Presley.",
+            "*Elvis Presley.",
             "Ray Charles",
             "Sam Cooke",
             "Bob Dylan",
@@ -48,7 +48,7 @@ internal class CasosUsoPreguntas {
     private val listPreguntasPintura = listOf<PreguntasDC>(
         PreguntasDC(
             "1P. ¿En qué país nació Antonio Vivaldi? ",
-            "En Italia",
+            "*Italia",
             "Francia",
             "Colombia",
             "Estados Unidos",
@@ -56,7 +56,7 @@ internal class CasosUsoPreguntas {
         ),
         PreguntasDC(
             "2P. ¿Qué rockero es recordado por haber “incendiado” su guitarra?",
-            "Jimi Hendrix",
+            "*Jimi Hendrix",
             "Nikki Sixx",
             "Georges Biard",
             "Ozzy",
@@ -64,7 +64,7 @@ internal class CasosUsoPreguntas {
         ),
         PreguntasDC(
             "3P. ¿Qué artista es comúnmente conocido como “El Padre del Soul”?",
-            "Ray Charles",
+            "*Ray Charles",
             "Alice Cooper",
             "Ringo Starr",
             "Marilyn Manson",
@@ -72,7 +72,7 @@ internal class CasosUsoPreguntas {
         ),
         PreguntasDC(
             "4P. ¿Qué cantante es considerado “El Rey del Rock and Roll”?",
-            "Elvis Presley.",
+            "*Elvis Presley.",
             "Ray Charles",
             "Sam Cooke",
             "Bob Dylan",
