@@ -8,6 +8,8 @@ import com.example.averresponde.databinding.ActivityMenuBinding
 import android.view.View
 
 import android.R.id
+import com.example.averresponde.ActivityPruebaFragments
+import com.example.averresponde.databinding.ActivityPruebaFragmentsBinding
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMenuBinding
@@ -43,7 +45,7 @@ class MenuActivity : AppCompatActivity() {
         // asisgnar accion al boton Paranormal con binding
         binding.btnParanormal.setOnClickListener(){
             //para cambiar a la otra activity
-            var intent= Intent(this, PreguntasActivity::class.java)
+            var intent= Intent(this, ActivityPruebaFragments::class.java)
             startActivity(intent)
             binding.textViewCategoria.text = "GENIAL"
         }

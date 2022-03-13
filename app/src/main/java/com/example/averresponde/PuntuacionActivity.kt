@@ -7,6 +7,7 @@ import android.os.CountDownTimer
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.example.averresponde.presentacion.FragmentPreguntas
 
 class PuntuacionActivity : AppCompatActivity() {
@@ -20,6 +21,12 @@ class PuntuacionActivity : AppCompatActivity() {
         //Vinculacion
         txtTiempo=findViewById(R.id.ConstraintLayout)
         tvCuentaAtras=findViewById(R.id.tvCuentaAtras)
+
+        //código para recivir la variable de la otra activity
+        val bundle = intent.extras
+        val dato = bundle?.getString("direccion")
+        println("daaaaaaaaaaaaaaaaaaaaaaaaaatttoooooooooooooooooooo"+dato)
+        Toast.makeText(this,dato,Toast.LENGTH_LONG).show()//imprimir sobre la pantalla el texto toast
 
 
     }

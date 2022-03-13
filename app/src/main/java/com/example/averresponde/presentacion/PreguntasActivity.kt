@@ -42,19 +42,24 @@ class PreguntasActivity : AppCompatActivity() {
         binding.butEmpe.setOnClickListener(){
             if (n<=numPreguntas) {
                 createFragment(FragmentPreguntas())
-            }else  {
-                //para cambiar a la otra activity
-                var intent= Intent(this, PuntuacionActivity::class.java)
-                startActivity(intent)
+            }//else  {
+            if (n>numPreguntas) {
+                cambiarSiguienteActivity()
             }
         }
 
         binding.otroF.setOnClickListener(){
-            var fragmentTrasaction = supportFragmentManager.beginTransaction()
+            //var fragmentTrasaction = supportFragmentManager.beginTransaction()
             //que voy a remplazar y por que voy a remplazar
-            fragmentTrasaction.replace(binding.FrameLayout1.id, FragmentPantallaCorrect())
+            //fragmentTrasaction.replace(binding.FrameLayout1.id, FragmentPantallaCorrect())
             //Pintar el fregment
-            fragmentTrasaction.commit()
+            //fragmentTrasaction.commit()
+
+            //para cambiar a la otra activity con una variable
+            val intent= Intent(this, PuntuacionActivity::class.java)
+            intent.putExtra("direccion",tiempoEnSegundos.toString())//para mandar la variable a la poxima activity
+            startActivity(intent)
+
         }
 
 
@@ -85,6 +90,14 @@ class PreguntasActivity : AppCompatActivity() {
         }
 
 
+    }
+    //funcion para pasar a la suiguiente activity borrar
+    //no poner dentro de un else se daña
+    private fun cambiarSiguienteActivity(){
+        var intent= Intent(this, PuntuacionActivity::class.java)
+        intent.putExtra("direccion","San Fransisco ALto")//para mandar la variable a la poxima activity
+        //intent.putExtra("direccion",tiempoEnSegundos.toString())//para mandar la variable a la poxima activity
+        startActivity(intent)
     }
 
     //funcion play para cuenta regresiva

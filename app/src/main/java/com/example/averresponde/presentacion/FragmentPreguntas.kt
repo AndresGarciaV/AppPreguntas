@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.averresponde.ActivityPruebaFragments
 import com.example.averresponde.controladores.PreguntasControlador
 import com.example.averresponde.databinding.FragmentPreguntasBinding
 import java.util.*
@@ -14,13 +15,9 @@ class FragmentPreguntas: Fragment() {
 
     private lateinit var binding: FragmentPreguntasBinding
     var puntuacion = 0
-    val maxtotal= 100
+    var maxtotal= 100
     //intentar mandar el numero de preguntas desde el activity preguntas para divivir para el maxtotal
-    val acum = maxtotal/10
-
-    val fragmentManager =
-    val fragmentTransaction = fragmentManager.beginTransaction()
-
+    var acum = maxtotal/10
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -80,19 +77,11 @@ class FragmentPreguntas: Fragment() {
             binding.radioButton4.isEnabled=false
 
 
-
-            var fragmentTrasaction = supportFragmentManager.beginTransaction()
-            //que voy a remplazar y por que voy a remplazar
-            fragmentTrasaction.replace(binding.FrameLayout1.id, FragmentPantallaCorrect())
-            //Pintar el fregment
-            fragmentTrasaction.commit()
-
         }
         //Asisganr accion al radioButton2
         binding.radioButton2.setOnClickListener(){
             val compRes=binding.radioButton2.text
             if (compRes==respuestaVerdadera){
-                binding.textPregunta.text = "Correcto"
                 binding.textPregunta.text = "Correcto"
                 puntuacion = acum + puntuacion
                 println("------------------------------------------------------------------------------------------"+puntuacion)
@@ -104,6 +93,7 @@ class FragmentPreguntas: Fragment() {
             binding.radioButton2.isEnabled=false
             binding.radioButton3.isEnabled=false
             binding.radioButton4.isEnabled=false
+
         }
         //Asisganr accion al radioButton3
         binding.radioButton3.setOnClickListener(){

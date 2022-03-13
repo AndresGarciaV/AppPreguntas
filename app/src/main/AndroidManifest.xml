@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AverResponde">
         <activity
+            android:name=".ActivityPruebaFragments"
+            android:exported="false" />
+        <activity
             android:name=".PuntuacionActivity"
             android:exported="false" />
         <activity
