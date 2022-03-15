@@ -4,33 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityPruebaFragments">
+    tools:context=".presentacion.FinalActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/botonCambio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CONTINUAR" />
-
         <TextView
-            android:id="@+id/textV3"
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="algo pa ecribir"
+            android:fontFamily="@font/lilita_one"
+            android:text="Bien hecho te has superado, pero todavía te falta, inténtalo nuevamente "
             android:textAlignment="center"
-            android:textSize="20sp" />
+            android:textSize="48sp" />
 
-        <FrameLayout
-            android:id="@+id/fragmentLayoutP"
+        <Button
+            android:id="@+id/btnIntentar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:text="INTENTAR " />
 
-        </FrameLayout>
-
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="salir" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

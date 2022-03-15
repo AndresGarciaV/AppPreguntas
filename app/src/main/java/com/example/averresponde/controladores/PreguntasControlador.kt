@@ -7,11 +7,11 @@ class PreguntasControlador {
     /*Se controla lo que se va a optener */
 
     //Funcion para tomar una pregunta
-    fun getOneNews(): PreguntasDC {
-        return PreguntasBL().getOneNews()
+    fun getOneQuestionMusica(): PreguntasDC {
+        return PreguntasBL().getOneQuestionMusica()
     }
     //SECCION PARA PINTURA
-    fun getOneNewsPintura(): PreguntasDC {
-        return PreguntasBL().getOneNewsPintura()
+    fun getOneQuestionPintura(): PreguntasDC {
+        return PreguntasBL().getOneQuestionPintura()
     }
 }

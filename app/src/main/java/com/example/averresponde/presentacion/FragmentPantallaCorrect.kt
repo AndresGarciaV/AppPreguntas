@@ -5,6 +5,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import com.example.averresponde.R
 import com.example.averresponde.databinding.FragmentPantallaCorrectoBinding
 
 

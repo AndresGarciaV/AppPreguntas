@@ -8,8 +8,7 @@ import com.example.averresponde.databinding.ActivityMenuBinding
 import android.view.View
 
 import android.R.id
-import com.example.averresponde.ActivityPruebaFragments
-import com.example.averresponde.databinding.ActivityPruebaFragmentsBinding
+import android.app.Activity
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMenuBinding
@@ -19,47 +18,41 @@ class MenuActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
         //asisgnar accion al boton pintura con binding
         /**/
-        binding.btnPintura.setOnClickListener(){
-            //para cambiar a la otra activity
-
-            var intent= Intent(this, PreguntasActivity::class.java)
-            startActivity(intent)
+        binding.btnMusica.setOnClickListener(){
+            cambiarActivity(ControlPreguntasActivity())
         }
         // asisgnar accion al boton Musica con binding
-        binding.btnMusica.setOnClickListener(){
-            //para cambiar a la otra activity
-            var intent= Intent(this, PreguntasActivity::class.java)
-            startActivity(intent)
-            binding.textViewCategoria.text = "GENIAL"
+        binding.btnPintura.setOnClickListener(){
+            cambiarActivity(ControlPreguntasActivity())
         }
         // asisgnar accion al boton Juegos con binding
         binding.btnJuegos.setOnClickListener(){
-            //para cambiar a la otra activity
-            var intent= Intent(this, PreguntasActivity::class.java)
-            startActivity(intent)
-            binding.textViewCategoria.text = "GENIAL"
+            //cambiarActivity(ControlPreguntasActivity())
         }
         // asisgnar accion al boton Paranormal con binding
         binding.btnParanormal.setOnClickListener(){
-            //para cambiar a la otra activity
-            var intent= Intent(this, ActivityPruebaFragments::class.java)
-            startActivity(intent)
-            binding.textViewCategoria.text = "GENIAL"
+            //cambiarActivity(ControlPreguntasActivity())
         }
 
         // asisgnar accion al boton Cerrar con binding
         binding.buttonCerrar.setOnClickListener(){
-            //para cerrar la actividad
+            //para cerrar la actividad y regresar a la anterior
             val cerrar = findViewById<View>(id.closeButton) as Button
             cerrar.setOnClickListener { finish() }
         }
 
 
 
-
-
     }
+
+    //Función para pasar a la suiguiente activity
+    //no poner dentro de un else se daña
+    public fun cambiarActivity(activity: Activity){
+        var intent= Intent(this, activity::class.java)
+        startActivity(intent)
+    }
+
+
 }
