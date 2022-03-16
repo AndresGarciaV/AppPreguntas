@@ -15,7 +15,11 @@ class ControlPreguntasActivity : AppCompatActivity() {
     private lateinit var binding: ActivityControlPreguntasBinding
     private var numeracionn: TextView?=null
     var numPreguntas =5
-    var cont = 0
+    var contPre = 0
+    //Definir la variable para el score
+    companion object {
+        var score: Int = 0
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,19 +32,19 @@ class ControlPreguntasActivity : AppCompatActivity() {
 
         //Acción para el boton continuar
         binding.btnContinuar.setOnClickListener(){
-            cont=cont+1
-            numeracionn?.text= (cont).toString()
+            contPre=contPre+1
+            numeracionn?.text= (contPre).toString()
 
-            if (cont<=numPreguntas) {
+            if (contPre<=numPreguntas) {
                 mostrarFragment(FragmentPreguntas())
 
             }
-            if (cont>numPreguntas) {
+            if (contPre>numPreguntas) {
                 cambiarActivity(FinalActivity())
                 ControlPreguntasActivity().onBackPressed()//Termina la Actividad
 
             }
-
+            println("imprimir la variable Score:::::::::::::::::::::"+ score.toString())
         }
     }
 

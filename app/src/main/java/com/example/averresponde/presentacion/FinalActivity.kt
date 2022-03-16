@@ -17,6 +17,8 @@ class FinalActivity : AppCompatActivity() {
         binding = ActivityFinalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        println("imprimir la variable Score-------------------------"+ ControlPreguntasActivity.score.toString())// la variable score conta como cero
+
         //Boton intentar nuevamente
         binding.btnIntentar.setOnClickListener(){
             cambiarActivity(MenuActivity())

@@ -11,10 +11,7 @@ import com.example.averresponde.databinding.FragmentPreguntasBinding
 
 class FragmentPreguntas: Fragment() {
     private lateinit var binding: FragmentPreguntasBinding
-    var puntuacion = 0
-    var maxtotal= 100
-    //intentar mandar el numero de preguntas desde el activity preguntas para divivir para el maxtotal
-    var acum = maxtotal/10
+    val valorxPre = 10
 
 
     override fun onCreateView(
@@ -23,6 +20,10 @@ class FragmentPreguntas: Fragment() {
     ): View? {
         //bindig para frangment
         binding= FragmentPreguntasBinding.inflate(inflater, container, false)
+        //tomar la varble de ControlPreguntasActivity para texView
+        binding.textviewScore.text =(ControlPreguntasActivity.score).toString()
+
+
 
 
         val nueva = PreguntasControlador().getOneQuestionPintura() //variable para agregar los atributos de una pregunta
@@ -75,7 +76,10 @@ class FragmentPreguntas: Fragment() {
     private fun comprobarRespuesta(compRes : String, respuestaVerdadera : String){
         if (compRes==respuestaVerdadera){
             binding.textPregunta.text = "Correcto"
-            puntuacion = acum + puntuacion
+            //Actualizar el puntaje
+            ControlPreguntasActivity.score = ControlPreguntasActivity.score + valorxPre
+            binding.textviewScore.text = ControlPreguntasActivity.score.toString()
+
         }else{
             binding.textPregunta.text = ("INCORRECTO es\n"+respuestaVerdadera)
         }
