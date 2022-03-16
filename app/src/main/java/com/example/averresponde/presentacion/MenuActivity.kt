@@ -13,6 +13,8 @@ import android.content.pm.ActivityInfo
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMenuBinding
+    var tipo = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         super.onCreate(savedInstanceState)
@@ -23,19 +25,21 @@ class MenuActivity : AppCompatActivity() {
         //asisgnar accion al boton pintura con binding
         /**/
         binding.btnMusica.setOnClickListener(){
-            cambiarActivity(ControlPreguntasActivity())
+            tipo= "MÚSICA"
+            cambiarActivityconDato(ControlPreguntasActivity(),tipo)
         }
         // asisgnar accion al boton Musica con binding
         binding.btnPintura.setOnClickListener(){
-            cambiarActivity(ControlPreguntasActivity())
+            tipo= "PINTURA"
+            cambiarActivityconDato(ControlPreguntasActivity(),tipo)
         }
         // asisgnar accion al boton Juegos con binding
         binding.btnJuegos.setOnClickListener(){
-            //cambiarActivity(ControlPreguntasActivity())
+            //
         }
         // asisgnar accion al boton Paranormal con binding
         binding.btnParanormal.setOnClickListener(){
-            //cambiarActivity(ControlPreguntasActivity())
+            //
         }
 
         // asisgnar accion al boton Cerrar con binding
@@ -49,18 +53,23 @@ class MenuActivity : AppCompatActivity() {
 
     }
 
-    //Función para pasar a la suiguiente activity
+    //Función para pasar a la suiguiente activity y mandar un dato
     //no poner dentro de un else se daña
+    public fun cambiarActivityconDato(activity: Activity, tipo: String){
+        var intent= Intent(this, activity::class.java)
+        intent.putExtra("llaveTipo",tipo)//para mandar la variable a la poxima activity
+        startActivity(intent)
+    }
+
     public fun cambiarActivity(activity: Activity){
         var intent= Intent(this, activity::class.java)
         startActivity(intent)
     }
 
-    //funcion para no permitir al boton atraz regresar a la pregunta anterior
+    //función para no permitir al boton atraz regresar a la activity anterior
     override fun onBackPressed() {
         cambiarActivity(MainActivity())
         //super.onBackPressed()
     }
-
 
 }

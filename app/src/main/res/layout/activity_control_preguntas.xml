@@ -11,7 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-35dp">
+
+        <TextView
+            android:id="@+id/textviewTipoPre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PREGUNTA"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
         <TextView
             android:id="@+id/numeracion"
