@@ -2,6 +2,7 @@ package com.example.averresponde.presentacion
 
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
@@ -22,6 +23,7 @@ class ControlPreguntasActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         super.onCreate(savedInstanceState)
         //Binding
         binding = ActivityControlPreguntasBinding.inflate(layoutInflater)
@@ -63,7 +65,11 @@ class ControlPreguntasActivity : AppCompatActivity() {
         var intent= Intent(this, activity::class.java)
         startActivity(intent)
     }
-
+    //funcion para no permitir al boton atraz regresar a la pregunta anterior
+    override fun onBackPressed() {
+        cambiarActivity(MenuActivity())
+        //super.onBackPressed()
+    }
 
 
 

@@ -2,6 +2,7 @@ package com.example.averresponde.presentacion
 
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.averresponde.R
@@ -12,6 +13,7 @@ class FinalActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFinalBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         super.onCreate(savedInstanceState)
         //Binding
         binding = ActivityFinalBinding.inflate(layoutInflater)

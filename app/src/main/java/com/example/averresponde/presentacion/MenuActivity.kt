@@ -9,10 +9,12 @@ import android.view.View
 
 import android.R.id
 import android.app.Activity
+import android.content.pm.ActivityInfo
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         super.onCreate(savedInstanceState)
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -52,6 +54,12 @@ class MenuActivity : AppCompatActivity() {
     public fun cambiarActivity(activity: Activity){
         var intent= Intent(this, activity::class.java)
         startActivity(intent)
+    }
+
+    //funcion para no permitir al boton atraz regresar a la pregunta anterior
+    override fun onBackPressed() {
+        cambiarActivity(MainActivity())
+        //super.onBackPressed()
     }
 
 

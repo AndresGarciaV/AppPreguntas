@@ -1,6 +1,7 @@
 package com.example.averresponde.presentacion
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -12,6 +13,7 @@ import com.example.averresponde.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         super.onCreate(savedInstanceState)
         //Binding
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -30,5 +32,12 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+
+
+    }
+    //funcion para no permitir al boton atraz regresar a la pregunta anterior
+    override fun onBackPressed() {
+        finishAffinity()
     }
 }
