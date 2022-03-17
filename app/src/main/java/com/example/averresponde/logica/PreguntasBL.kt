@@ -43,7 +43,7 @@ class PreguntasBL {
         ////
         if (numRanUsados.isEmpty()){
             println("lista ::::::::: "+ numRanUsados)
-            println("lista vacia :::::::::: r: "+ r+ " agregamos a la lista")
+            println("lista vacia :::::::::: r: "+r+ " agregamos a la lista")
             numRanUsados.add(r)
             println("lista ::::::::: "+ numRanUsados)
         }else{

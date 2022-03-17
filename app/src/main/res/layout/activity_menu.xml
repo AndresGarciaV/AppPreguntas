@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@drawable/degradado3"
     tools:context=".presentacion.MenuActivity">
 
     <LinearLayout
@@ -33,6 +33,7 @@
                 android:id="@+id/btnJuegos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 app:srcCompat="@drawable/videojuegos"
                 style="?android:attr/borderlessButtonStyle" />
         </LinearLayout>
@@ -75,9 +76,10 @@
         android:id="@+id/buttonCerrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/radius4"
         android:fontFamily="@font/lilita_one"
         android:text="SALIR"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

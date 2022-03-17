@@ -4,33 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2C3E50"
     tools:context=".presentacion.FinalActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textView5"
+
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/radius2"
+            android:text="Tu puntuacion es:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+
+            android:id="@+id/linearLayoutF"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/degradado"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/iniciotitulo"
+                android:gravity="center"
+                android:text="85"
+                android:textColor="@color/white"
+                android:textSize="96sp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/lilita_one"
+            android:layout_margin="40dp"
+            android:fontFamily="serif-monospace"
             android:text="Bien hecho te has superado, pero todavía te falta, inténtalo nuevamente "
             android:textAlignment="center"
-            android:textSize="48sp" />
+            android:textColor="@color/white"
+            android:textSize="34sp" />
 
         <Button
             android:id="@+id/btnIntentar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="INTENTAR " />
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/corner_radius"
+            android:text="INTENTAR"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btnSalir"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="salir" />
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/corner_radius"
+            android:text="Salir"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
