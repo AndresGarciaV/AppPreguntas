@@ -16,9 +16,9 @@ import com.example.averresponde.databinding.ActivityControlPreguntasBinding
 class ControlPreguntasActivity : AppCompatActivity() {
     private lateinit var binding: ActivityControlPreguntasBinding
     private var numeracionn: TextView?=null
-    var numPreguntas =5
+    var numPreguntas =4 //No superar al número de preguntas
     var contPre = 0
-    //Definir la variable para el score
+    //Definición de variables para el score
     companion object {
         var score: Int = 0
         var tipoPregunta = ""
@@ -84,7 +84,6 @@ class ControlPreguntasActivity : AppCompatActivity() {
         cambiarActivity(MenuActivity())
         //super.onBackPressed()
     }
-
 
 
 

@@ -4,28 +4,62 @@ import com.example.averresponde.casosdeUso.CasosUsoPreguntas
 import com.example.averresponde.entidades.PreguntasDC
 
 class PreguntasBL {
-    //funcion para obtener una nueva listas
+
+    companion object {
+        var numRanUsados: MutableList<Int> = mutableListOf()
+        var r = 0
+    }
+
+
+
+    //función para obtener una nueva listas
     fun getQuestionListMusica(): List<PreguntasDC> {
         return CasosUsoPreguntas().getAllQuestionMusica() //debuelve todas las preguntas lista de Música
     }
-
-    //funcion para obtener una pregunta
+    //función para obtener una pregunta
     fun getOneQuestionMusica(): PreguntasDC {
-        val r = (0..3).random() //elige un randomico entre 0 y 3
+        randomNumero()
         return CasosUsoPreguntas().getAllQuestionMusica()[r]//devuelve una pregunta
     }
 
+
 //SECCION PARA PINTURA
-    //funcion para obtener una nueva listas
     fun getQuestionListPintura(): List<PreguntasDC> {
-        return CasosUsoPreguntas().getAllQuestionPrintura() //debuelve todas las preguntas lista Pintura
+        return CasosUsoPreguntas().getAllQuestionPrintura()
     }
-    //funcion para obtener una pregunta
     fun getOneQuestionPintura(): PreguntasDC {
-        val r = (0..3).random() //elige un randomico entre 0 y 3
-        return CasosUsoPreguntas().getAllQuestionPrintura()[r]//devuelve una pregunta
+        randomNumero()
+        return CasosUsoPreguntas().getAllQuestionPrintura()[r]
     }
 
+
+
+    //funcion para no repetir las preguntas se toma en cuenta un lista mutable y un companion object como variable
+    //asigana a la variable r números no repetidos
+    private fun randomNumero(){
+        println("******************** Función randomNumero ***********************")
+        r = (0..3).random() //elige un randomico entre 0 y 3, su superar a número de preguntas
+        var contiene: List<Int>? = null
+        ////
+        if (numRanUsados.isEmpty()){
+            println("lista ::::::::: "+ numRanUsados)
+            println("lista vacia :::::::::: r: "+ r+ " agregamos a la lista")
+            numRanUsados.add(r)
+            println("lista ::::::::: "+ numRanUsados)
+        }else{
+            contiene = numRanUsados.filter { it == r }
+            println("lista no vacia :::::::::: lista:"+ numRanUsados)
+            println("el nuevo r es :::::::::: "+ r)
+            if(contiene.isEmpty()){
+                println("el contenedor esta vacio, porque r ::::::::: "+ r+"  no se repite, lo agregamos")
+                numRanUsados.add(r)
+                println("lista ::::::::: "+ numRanUsados)
+            }else{
+                println("r ::::::::: "+ r +" se repitio por lo que llamamos denuevo a la función")
+                randomNumero()
+            }
+        }
+    }
 
 
 }

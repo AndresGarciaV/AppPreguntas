@@ -8,13 +8,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.averresponde.controladores.PreguntasControlador
 import com.example.averresponde.databinding.FragmentPreguntasBinding
+import com.example.averresponde.entidades.PreguntasDC
 
 
 class FragmentPreguntas: Fragment() {
     private lateinit var binding: FragmentPreguntasBinding
     val valorxPre = 10 //valor agregado para cada pregunta respuesta correctamente
     var datoFrag = ControlPreguntasActivity.tipoPregunta //dato para la categoria de preguntas
-    var nueva = PreguntasControlador().getOneQuestionMusica()// variablo para asignar el objeto preguntas
 
 
     override fun onCreateView(
@@ -27,10 +27,14 @@ class FragmentPreguntas: Fragment() {
         binding.textviewScore.text =(ControlPreguntasActivity.score).toString()
 
 
-
-
-        ///////////////Seccion para asignar el tipo de pregunta seleccionada///////////////
-        llamarTipoPregunta()
+        //Seccion para asignar el tipo de pregunta seleccionada
+        var nueva: PreguntasDC? = null
+        if(datoFrag == "MÚSICA") {
+            nueva = PreguntasControlador().getOneQuestionMusica() //variable para agregar los atributos de una pregunta
+        }
+        if(datoFrag == "PINTURA") {
+            nueva = PreguntasControlador().getOneQuestionPintura() //variable para agregar los atributos de una pregunta
+        }
         //Ingresar las respuestas en variables
         val r1= nueva?.respuestaV
         val r2= nueva?.respuestaF1
@@ -106,16 +110,6 @@ class FragmentPreguntas: Fragment() {
         binding.radioButton2.isEnabled=false
         binding.radioButton3.isEnabled=false
         binding.radioButton4.isEnabled=false
-    }
-
-    private fun llamarTipoPregunta(){
-        if(datoFrag == "MÚSICA"){
-            nueva = PreguntasControlador().getOneQuestionMusica() //variable para agregar los atributos de una pregunta
-        }
-        if(datoFrag == "PINTURA"){
-            nueva = PreguntasControlador().getOneQuestionPintura() //variable para agregar los atributos de una pregunta
-        }
-        //llenar para mas categorias
     }
 
 }
