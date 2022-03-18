@@ -28,13 +28,21 @@ class FragmentPreguntas: Fragment() {
 
 
         //Seccion para asignar el tipo de pregunta seleccionada
-        var nueva: PreguntasDC? = null
+        var nueva: PreguntasDC? = null //variable para agregar los atributos de una pregunta
         if(datoFrag == "MÚSICA") {
-            nueva = PreguntasControlador().getOneQuestionMusica() //variable para agregar los atributos de una pregunta
+            nueva = PreguntasControlador().getOneQuestionMusica()
         }
         if(datoFrag == "PINTURA") {
-            nueva = PreguntasControlador().getOneQuestionPintura() //variable para agregar los atributos de una pregunta
+            nueva = PreguntasControlador().getOneQuestionPintura()
         }
+        if(datoFrag == "VIDEO JUEGOS") {
+            nueva = PreguntasControlador().getOneQuestionVJ()
+        }
+        if(datoFrag == "PARANORMAL") {
+            nueva = PreguntasControlador().getOneQuestionParanormal()
+        }
+
+
         //Ingresar las respuestas en variables
         val r1= nueva?.respuestaV
         val r2= nueva?.respuestaF1

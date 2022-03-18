@@ -11,7 +11,7 @@ class PreguntasBL {
     }
 
 
-
+    //SECCION PARA MÚSICA
     //función para obtener una nueva listas
     fun getQuestionListMusica(): List<PreguntasDC> {
         return CasosUsoPreguntas().getAllQuestionMusica() //debuelve todas las preguntas lista de Música
@@ -23,13 +23,31 @@ class PreguntasBL {
     }
 
 
-//SECCION PARA PINTURA
+    //SECCION PARA PINTURA
     fun getQuestionListPintura(): List<PreguntasDC> {
         return CasosUsoPreguntas().getAllQuestionPrintura()
     }
     fun getOneQuestionPintura(): PreguntasDC {
         randomNumero()
         return CasosUsoPreguntas().getAllQuestionPrintura()[r]
+    }
+
+    //SECCION PARA VIDEOJUEGOS
+    fun getQuestionListVJ(): List<PreguntasDC> {
+        return CasosUsoPreguntas().getAllQuestionVJ()
+    }
+    fun getOneQuestionVJ(): PreguntasDC {
+        randomNumero()
+        return CasosUsoPreguntas().getAllQuestionVJ()[r]//devuelve una pregunta
+    }
+
+    //SECCION PARA PARANORMAL
+    fun getQuestionListParanormal(): List<PreguntasDC> {
+        return CasosUsoPreguntas().getAllQuestionParanormal()
+    }
+    fun getOneQuestionParanormal(): PreguntasDC {
+        randomNumero()
+        return CasosUsoPreguntas().getAllQuestionParanormal()[r]//devuelve una pregunta
     }
 
 

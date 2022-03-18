@@ -15,9 +15,17 @@ class PreguntasControlador {
     fun getOneQuestionMusica(): PreguntasDC? {
         return PreguntasBL().getOneQuestionMusica()
     }
-    //SECCION PARA PINTURA
+
     fun getOneQuestionPintura(): PreguntasDC {
         return PreguntasBL().getOneQuestionPintura()
+    }
+
+    fun getOneQuestionVJ(): PreguntasDC {
+        return PreguntasBL().getOneQuestionVJ()
+    }
+
+    fun getOneQuestionParanormal(): PreguntasDC {
+        return PreguntasBL().getOneQuestionParanormal()
     }
 
 

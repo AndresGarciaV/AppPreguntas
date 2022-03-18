@@ -35,11 +35,13 @@ class MenuActivity : AppCompatActivity() {
         }
         // asisgnar accion al boton Juegos con binding
         binding.btnJuegos.setOnClickListener(){
-            //
+            tipo= "VIDEO JUEGOS"
+            cambiarActivityconDato(ControlPreguntasActivity(),tipo)
         }
         // asisgnar accion al boton Paranormal con binding
         binding.btnParanormal.setOnClickListener(){
-            //
+            tipo= "PARANORMAL"
+            cambiarActivityconDato(ControlPreguntasActivity(),tipo)
         }
 
         // asisgnar accion al boton Cerrar con binding
