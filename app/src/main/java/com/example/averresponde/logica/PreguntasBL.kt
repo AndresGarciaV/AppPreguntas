@@ -56,7 +56,7 @@ class PreguntasBL {
     //asigana a la variable r números no repetidos
     private fun randomNumero(){
         println("******************** Función randomNumero ***********************")
-        r = (0..3).random() //elige un randomico entre 0 y 3, su superar a número de preguntas
+        r = (0..19).random() //elige un randomico entre 0 y 3, su superar a número de preguntas
         var contiene: List<Int>? = null
         ////
         if (numRanUsados.isEmpty()){

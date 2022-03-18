@@ -16,7 +16,7 @@ import com.example.averresponde.databinding.ActivityControlPreguntasBinding
 class ControlPreguntasActivity : AppCompatActivity() {
     private lateinit var binding: ActivityControlPreguntasBinding
     private var numeracionn: TextView?=null
-    var numPreguntas =4 //No superar al número de preguntas
+    var numPreguntas =10 //No superar al número de preguntas a 20
     var contPre = 0
     //Definición de variables para el score
     companion object {

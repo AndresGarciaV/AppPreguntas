@@ -46,9 +46,7 @@ class MenuActivity : AppCompatActivity() {
 
         // asisgnar accion al boton Cerrar con binding
         binding.buttonCerrar.setOnClickListener(){
-            //para cerrar la actividad y regresar a la anterior
-            val cerrar = findViewById<View>(id.closeButton) as Button
-            cerrar.setOnClickListener { finish() }
+            cambiarActivity(MainActivity())
         }
 
 
