@@ -66,6 +66,7 @@ class ControlPreguntasActivity : AppCompatActivity() {
     //no poner dentro de un else se daña
     private fun cambiarActivity(activity: Activity){
         var intent= Intent(this, activity::class.java)
+        intent.putExtra("llaveScore",score.toString())//para mandar la variable a la poxima activity
         startActivity(intent)
     }
 
