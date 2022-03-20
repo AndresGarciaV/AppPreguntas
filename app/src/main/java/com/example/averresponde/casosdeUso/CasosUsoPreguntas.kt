@@ -51,11 +51,11 @@ internal class CasosUsoPreguntas {
             "Ozzy"
         ),//7
         PreguntasDC(
-            "¿Quién afirmó que 'I'm Still Standing' en 1983?",
-            "Elton John",
-            "Alice Cooper",
-            "Bon Jovi",
-            "Bob Dylan"
+            "¿Quién compuso 'The Hungarian Dances'?",
+            "Johannes Brahms",
+            "Aaron Copland",
+            "Johann Pachelbel",
+            "George Gershwin"
         ),//8
         PreguntasDC(
             "¿En qué película de culto apareció David Bowie en 1986?",
@@ -82,7 +82,7 @@ internal class CasosUsoPreguntas {
             "¿En qué año de los 80 Queen les informó a todos que otro había mordido el polvo?",
             "1980",
             "1987",
-            "1987",
+            "1985",
             "1983"
         ),//12
         PreguntasDC(
@@ -143,7 +143,7 @@ internal class CasosUsoPreguntas {
             "7"
         ),//20
         PreguntasDC(
-            "¿Qué cantante de pop country naciócomo Eilleen Regina Edwards?",
+            "¿Qué cantante de pop country nació como Eilleen Regina Edwards?",
             "Shania Twain",
             "Luis Miguel",
             "John Strauss",
@@ -186,7 +186,7 @@ internal class CasosUsoPreguntas {
         )
         ,//5
         PreguntasDC(
-            "¿Quién pintó el famoso cuadro ¨EL NACIMIENTO DE VENUS¨?",
+            "¿Quién pintó el famoso cuadro 'EL NACIMIENTO DE VENUS'?",
             "Botticelli",
             "Miguel Ángel",
             "Rafael",
@@ -202,7 +202,7 @@ internal class CasosUsoPreguntas {
         )
         ,//7
         PreguntasDC(
-            "¿Quién pintó el famoso cuadro¨LA RONDA DE NOCHE¨?",
+            "¿Quién pintó el famoso cuadro 'LA RONDA DE NOCHE'?",
             "Rembrandt",
             "Brueghel",
             "Vermeer",
@@ -226,7 +226,7 @@ internal class CasosUsoPreguntas {
         )
         ,//10
         PreguntasDC(
-            "¿Quién pintó el famoso cuadro ¨LOA RELOJES BALNDOS¨?",
+            "¿Quién pintó el famoso cuadro 'LOA RELOJES BALNDOS'?",
             "Dalí",
             "Magritte",
             "Picasso",
@@ -292,7 +292,7 @@ internal class CasosUsoPreguntas {
             "Pablo Picasso"
         ),//19
         PreguntasDC(
-            "¿Cómo se llama este pintor que se cortó la oreja?",
+            "¿Cómo se llama el pintor que se cortó la oreja?",
             "Van Gogh",
             "Tiziano",
             "Miguel Andgel",
@@ -314,7 +314,7 @@ internal class CasosUsoPreguntas {
         //1
         PreguntasDC(
             "¿Cómo se llama el hermano de Mario Bros?",
-            "*Luigi",
+            "Luigi",
             "Mario Jr.",
             "Honguito",
             "Luis"
