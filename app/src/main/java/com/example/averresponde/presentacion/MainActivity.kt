@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
     }
     //funcion para no permitir al boton atraz regresar a la pregunta anterior
     override fun onBackPressed() {

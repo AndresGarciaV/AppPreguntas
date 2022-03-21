@@ -5,6 +5,7 @@ import com.example.averresponde.entidades.PreguntasDC
 
 class PreguntasBL {
 
+    //Objetos complementarios
     companion object {
         var numRanUsados: MutableList<Int> = mutableListOf()
         var r = 0
@@ -52,7 +53,7 @@ class PreguntasBL {
 
 
 
-    //funcion para no repetir las preguntas se toma en cuenta un lista mutable y un companion object como variable
+    //funcion para no repetir las preguntas, se toma en cuenta un lista mutable
     //asigana a la variable r números no repetidos
     private fun randomNumero(){
         println("******************** Función randomNumero ***********************")
@@ -74,7 +75,7 @@ class PreguntasBL {
                 println("lista ::::::::: "+ numRanUsados)
             }else{
                 println("r ::::::::: "+ r +" se repitio por lo que llamamos denuevo a la función")
-                randomNumero()
+                randomNumero() //Recursividad
             }
         }
     }

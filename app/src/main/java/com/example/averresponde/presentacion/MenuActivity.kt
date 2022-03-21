@@ -54,7 +54,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     //Función para pasar a la suiguiente activity y mandar un dato
-    //no poner dentro de un else se daña
+    //no poner dentro de un else
     public fun cambiarActivityconDato(activity: Activity, tipo: String){
         var intent= Intent(this, activity::class.java)
         intent.putExtra("llaveTipo",tipo)//para mandar la variable a la poxima activity
